@@ -14,17 +14,8 @@ const setValue = (value) => {
     $value.textContent = value;
 }
 
-const createRandomNumber = (max) => {
-    return Math.floor(Math.random() * max);
-};
-
-const createRGBNumber = () => {
-    return [createRandomNumber(255), createRandomNumber(255), createRandomNumber(255)]
-}
-
 const generate = () => {
-    const rgb = createRGBNumber(255)
-    const hex = rgb.map((value) => value.toString(16)).join('')
+    const hex = Math.random().toString(16).substring(2,8)
     const color = `#${hex}`
     document.body.style.backgroundColor = color;
     setValue(color);
