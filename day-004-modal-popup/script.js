@@ -10,14 +10,19 @@ const $closeButton = document.querySelector(SELECTORS.close);
 const $dialog = document.querySelector(SELECTORS.dialog);
 const $modal = document.querySelector(SELECTORS.modal);
 
-
-
 const open = () => {
     $dialog.showModal();
 }
 
 const close = () => {
-    $dialog.close();
+    const closingClass = 'closing', onAnimationEndEventName = 'animationend';
+    $dialog.classList.add(closingClass);
+    const onAnimationEnd = () => {
+        $dialog.classList.remove(closingClass);
+        $dialog.close();
+        $dialog.removeEventListener(onAnimationEndEventName, onAnimationEnd);
+    }
+    $dialog.addEventListener(onAnimationEndEventName, onAnimationEnd);
 }
 
 const actions = {

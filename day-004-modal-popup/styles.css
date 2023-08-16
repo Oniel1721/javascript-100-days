@@ -87,6 +87,21 @@ dialog[open] {
   animation-fill-mode: forwards;
 }
 
+dialog[open].closing {
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }  
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-100vh);
@@ -98,6 +113,36 @@ dialog[open] {
 
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog[open]::backdrop {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+
+dialog[open].closing::backdrop {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }  
 }
 
 .modal {
