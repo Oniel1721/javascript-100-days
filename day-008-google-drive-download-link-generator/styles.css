@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --red: #ff5e00;
+  --green: #039c00;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+}
+
+main {
+  order: 2;
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+main header {
+  width: 512px;
+}
+
+main nav {
+  background-color: var(--grey);
+  width: 100%;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  text-align: center;
+}
+
+main ul li {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  width: 128px;
+}
+
+main ul li:hover {
+  background-color: var(--color-primary);
+}
+
+main section {
+  border: 2px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+
+main section h2 {
+  margin-bottom: 0.5rem;
+}
+
+main section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+main section input {
+  border-radius: 0.5rem 0 0.5rem 0;
+  outline: none;
+  border: none;
+  border-bottom: var(--dark-grey);
+  background-color: var(--grey);
+  padding: 1rem;
+}
+
+main section form button {
+  background-color: var(--color-sec);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main footer div {
+  position: relative;
+  height: 10rem;
+}
+
+main footer textarea {
+  width: 100%;
+  height: 100%;
+}
+
+main footer button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+}
+
+aside {
+  order: 1;
+  width: 32rem;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+aside h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  color: var(--color-sec);
+}
+
+aside h2::after {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 0.1rem;
+  background-color: var(--white);
+}
+
+aside p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.05rem;
+  background-color: var(--white);
+  margin-bottom: 1rem;
+}
+
+aside ol {
+  margin-left: 1rem;
+}
+
+aside span {
+  color: var(--color-sec);
+}
