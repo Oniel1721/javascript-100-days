@@ -123,6 +123,8 @@ main footer div {
 main footer textarea {
   width: 100%;
   height: 100%;
+  color: var(--light-blue);
+  padding: 1rem;
 }
 
 main footer button {
@@ -134,6 +136,20 @@ main footer button {
   color: var(--white);
   cursor: pointer;
   border: none;
+  width: 4rem;
+}
+
+main footer a {
+  position: absolute;
+  bottom: 0;
+  right: 4.5rem;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 aside {

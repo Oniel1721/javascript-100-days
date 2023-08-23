@@ -12,23 +12,13 @@
 
 <body>
   <main>
-    <header>
-      <h1>Google Direct Download Link Generator</h1>
-      <nav>
-        <ul>
-          <li>Paste Link</li>
-          <li>Embed Audio</li>
-          <li>Embed Video/Docs</li>
-        </ul>
-      </nav>
-    </header>
     <section>
       <header>
         <h2>Google Drive link</h2>
         <p>Paste your Google Drive File link bellow</p>
       </header>
       <form>
-        <input type="text" placeholder="Paste your Google Drive File link here" />
+        <input name="url" type="url" placeholder="Paste your Google Drive File link here" />
         <button type="submit">Generate Direct Download Link</button>
       </form>
       <footer>
@@ -36,7 +26,8 @@
         <div>
           <textarea>
           </textarea>
-          <button type="button">Copy</button>
+          <button id="copy-button" type="button">Copy</button>
+          <a target="_blank" id="download">Download</a>
         </div>
       </footer>
     </section>
