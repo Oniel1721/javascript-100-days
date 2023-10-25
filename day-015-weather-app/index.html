@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 015 - Weather App</title>
+  <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <main>
+    <header class="app-header">
+      <h1 class="app-title">Weather App</h1>
+    </header>
+    <form class="app-form">
+      <input class="search" type="text" placeholder="Search by city name" />
+      <button class="submit">Submit</button>
+    </form>
+    <section id="results" data-display="false" class="results">
+      <header class="results__header">
+        <h2 id="city">City name</h2>
+        <p id="date">Date</p>
+      </header>
+      <hr>
+      <div>
+        <p>Temp: <span id="temp">value</span></p>   
+      </div>
+      <div>
+        <p>Weather: <span id="weather">value</span></p>
+        
+      </div>
+      <div>
+        <p>Temp range: <span id="temp-range">value</span></p>      
+      </div>
+    </section>
+  </main>
+</body>
+</html>
